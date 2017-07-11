@@ -1,0 +1,17 @@
+.quick-view {
+  width: 100pt;
+  text-align: center;
+  background-color: red;
+}
+
+td {
+  vertical-align: top;
+}
+
+p {
+  margin-bottom:5pt;
+}
+
+table {
+  max-width: 300pt;
+}
