@@ -4,26 +4,35 @@ import { Directive, ElementRef, OnInit, HostListener, HostBinding, Input } from 
   selector: '[appToggle]'
 })
 export class ToggleDirective implements OnInit {
-  @Input() minimized = true;
+  @Input() minimized;
   @HostBinding('style.height') height: string ;
   @HostBinding('style.width') width: string ;
   @HostBinding('style.border-radius') borderRadius: string ;
 
+  initial = '50pt';
+  enlarged = '70pt';
+
   ngOnInit() {
-    this.height = '50pt';
-    this.width = '50pt';
-    this.borderRadius = '50pt';
+    if (!this.minimized) {
+      this.height = this.enlarged;
+      this.width = this.enlarged;
+      this.borderRadius = this.enlarged;
+    } else {
+      this.height = this.initial;
+      this.width = this.initial;
+      this.borderRadius = this.initial;
+    }
   }
 
   @HostListener('click') onClick(eventData: Event) {
     if (this.minimized) {
-      this.height = '100pt';
-      this.width = '100pt';
-      this.borderRadius = '100pt';
+      this.height = this.enlarged;
+      this.width = this.enlarged;
+      this.borderRadius = this.enlarged;
     } else {
-      this.height = '50pt';
-      this.width = '50pt';
-      this.borderRadius = '50pt';
+      this.height = this.initial;
+      this.width = this.initial;
+      this.borderRadius = this.initial;
     }
     this.minimized = !this.minimized;
     console.log('click');

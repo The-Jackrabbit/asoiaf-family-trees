@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character-blob.component.css']
 })
 export class CharacterBlobComponent implements OnInit {
-
+  first_name = 'Daenarys';
+  last_name = 'Targaryen';
   constructor() { }
 
   ngOnInit() {

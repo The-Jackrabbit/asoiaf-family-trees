@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  div { width : 100px; height: 100px;
+      border: thin solid red;
+    overflow:visible;
+      }
+
+blockquote   { width : 125px; height : 100px;
+      margin-top: 10px; margin-left: 50px;
+      border: thin dashed black;
+
+      }
+
+cite { display: block;
+       text-align : right;
+       border: none
+       }
+
+span {display:block; border:1px solid blue; margin:10px 0px;width:100px; height:100px;}
+</style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+
+ $(function() {
+$( "blockquote" ).draggable();
+});</script>
+
+  <input type="button" value="visible" onclick="$('div').css('overflow','visible');" />
+<input type="button" value="hidden" onclick="$('div').css('overflow','hidden');" />
+<input type="button" value="scroll" onclick="$('div').css('overflow','scroll');" />
+<div >
+    <strong><img src="http://placehold.it/25x30" class="ui-widget-content" /></strong>
+<blockquote>
+<p>I didn't like the play, but then I saw
+it under adverse conditions - the curtain was up.</p>
+<cite>- Groucho Marx</cite>
+
+</blockquote>
+</div>
+
+<span>2nd box</span>
+
+</body>
+</html>

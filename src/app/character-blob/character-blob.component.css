@@ -1,7 +1,6 @@
 .quick-view {
   width: 100pt;
   text-align: center;
-  background-color: red;
 }
 
 td {
@@ -14,4 +13,48 @@ p {
 
 table {
   max-width: 300pt;
+}
+
+hr {
+  padding: 0;
+  border: none;
+  border-top: medium double #8c8c8c;
+  color: #8c8c8c;
+  text-align: center;
+  position: relative;
+  top: -13pt;
+  margin-bottom:0pt;
+}
+hr:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0;
+  margin:0;
+}
+span {
+  margin-top:0;
+}
+
+.separator {
+  width: 80%;
+  margin:0 auto;
+}
+
+.name-block {
+  width:60%;
+  margin:0 auto;
+  position: relative;
+  top:-8pt;
+}
+
+.full-sized-container {
+  border:2pt solid black;
+  height: 150pt;
+  width:300pt;
+  position:relative;
+  top:-130pt;
+  border-radius: 12pt;
 }
