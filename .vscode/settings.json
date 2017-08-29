@@ -1,0 +1,52 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "auto-close-tag.activationOnLanguage": [
+ "html",
+ "xml",
+ "php",
+ "blade",
+ "ejs",
+ "handlebars",
+ "jinja",
+ "javascript",
+ "javascriptreact",
+ "typescript",
+ "typescriptreact",
+ "plaintext",
+ "markdown",
+ "razor",
+ "vue",
+ "liquid",
+ "CFML",
+ "coldfusion",
+ "cfscript",
+ "cfml"
+],
+
+"auto-close-tag.excludedTags": [
+ "area",
+ "base",
+ "br",
+ "col",
+ "command",
+ "embed",
+ "hr",
+ "img",
+ "input",
+ "keygen",
+ "link",
+ "meta",
+ "param",
+ "source",
+ "track",
+ "wbr",
+ "cfdump",
+ "cfset",
+ "cfparam"
+],
+
+"editor.fontSize": 14,
+"editor.tabSize": 3,
+"editor.insertSpaces": false,
+"editor.detectIndentation": false
+}

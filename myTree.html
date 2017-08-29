@@ -92,21 +92,29 @@ function update(source) {
     d.y = d.depth*150;
     console.log(d);
   });
+  links.forEach(function(d) {
+    console.log(d);
+  });
 
   // Declare the nodesâ€¦
   var node = svg.selectAll("g.node")
-   .data(nodes, function(d) { return d.id || (d.id = ++i); });
-
+   .data(nodes, function(d) {
+     return d.id || (d.id = ++i);
+   });
   // Enter the nodes.
   var nodeEnter = node.enter().append("g")
    .attr("class", "node")
    .attr("transform", function(d) {
     return "translate(" + d.x + "," + d.y + ")"; });
 
+    // ADD NODE SHAPE
+
   nodeEnter.append("rect")
    .attr("width", 20)
    .attr("height", 20)
    .style("fill", "#bbb");
+
+    // ADD NODE TEXT
 
   nodeEnter.append("text")
    .attr("x", function(d) {
